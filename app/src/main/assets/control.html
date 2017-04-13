@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>CIBN互联网电视 遥控器</title>
+<style type="text/css">
+@charset "utf-8";
+/* Reset */
+body, h1, h2, h3, h4, h5, h6, blockquote, p, pre, dl, dd, ol, ul, caption, th, td, form, fieldset, legend, input, button, textarea, address {
+	margin: 0;
+	padding: 0
+}icon_volumeup
+body, button, input, select, textarea {
+	font: 12px/1.5 "Helvetica Neue", Helvetica, "Microsoft YaHei", STXihei, Sans-serif;
+	color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+em {
+	font-style: normal;
+}
+ul, ol, li, dl, dt, dd {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	-webkit-tap-highlight-color: transparent;
+}
+img {
+	border: 0px;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Common */
+html, body {
+	width: 100%;
+	height: 100%;
+	background-color:#414f6e;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	zoom: 1;
+}
+.textHide {
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.ell {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.fr {
+	float: right;
+}
+.fl {
+	float: left;
+}
+.icon {
+	display: inline-block;
+	background: url(ctrlpad/icon.png) no-repeat;
+	background-size: 120px auto;
+}
+.icon-connect, .icon-disconnect, .icon-connecting {
+	width: 16px;
+	height: 16px;
+	background-position: 0 1px;
+}
+.icon-disconnect {
+	background-position: -24px 2px;
+}
+.icon-connecting {
+	background-position: -78px 1px;
+}
+.icon-tip {
+	width: 18px;
+	height: 21px;
+	background-size: 160px auto;
+	background-position: -136px 0;
+}
+.btn {
+	display: inline-block;
+	border-radius: 2px;
+	font-size: 13px;
+	line-height: 20px;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid transparent;
+}
+.btn-default {
+	padding: 5px 8px;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+}
+.btn-primary {
+	padding: 5px 8px;
+	color: #fff;
+	background-color: #64a0d7;
+	border-color: #64a0d7;
+}
+.btn-disabled {
+	background-color: #ccc!important;
+	border-color: transparent!important;
+	color: #fff!important;
+}
+.btn-small {
+	padding: 2px 8px;
+}
+.btn-xsmall {
+	padding: 0 8px;
+}
+.btn-primary:active, .btn-small:active, .btn-xsmall:active {
+	opacity: .9;
+}
+.btn-disabled {
+	color: #fff!important;
+	background: #e3e3e3!important;
+	cursor: default!important;
+}
+.btn-disabled:hover, .btn-disabled:active, .btn-disabled:focus {
+	opacity: 1;
+	text-decoration: none!important;
+}
+.arrow {
+	width: 0;
+	height: 0;
+	border-color: #fff transparent;
+	border-style: solid;
+}
+.arrow-top {
+	border-width: 0 13px 15px;
+}
+.arrow-bottom {
+	border-width: 15px 13px 0;
+}
+.arrow-left {
+	border-width: 13px 15px 13px 0;
+}
+.arrow-right {
+	border-width: 13px 0 13px 15px;
+}
+.ctrl-btns .icon-btn {
+	position: absolute;
+	display: inline-block;
+	background-size: cover;
+}
+.ctrl-btns .icon-btn:active {
+	background-size: cover;
+}
+.icon-home {
+	width: 45px;
+	height: 45px;
+	background: url(ctrlpad/icon_home.png) no-repeat;
+	top: 60px;
+	left: 20px;
+}
+.icon-home:active {
+	background: url(ctrlpad/icon_home_active.png) no-repeat;
+}
+.icon-menu {
+	width: 45px;
+	height: 45px;
+	background: url(ctrlpad/icon_menu.png) no-repeat;
+	top: 60px;
+	right: 20px;
+}
+.icon-menu:active {
+	background: url(ctrlpad/icon_menu_active.png) no-repeat;
+}
+.icon-volume-wrap {
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	margin-left: -90px;
+}
+.icon-volumeup, .icon-volumedown {
+	width: 90px;
+	height: 45px;
+	top: 0;
+}
+.icon-volumeup {
+	background: url(ctrlpad/icon_volumeup.png) no-repeat;
+	left: 90px;
+}
+.icon-volumeup:active {
+	background: url(ctrlpad/icon_volumeup_active.png) no-repeat;
+}
+.icon-volumedown {
+	background: url(ctrlpad/icon_volumedown.png) no-repeat;
+	left: 0;
+}
+.icon-volumedown:active {
+	background: url(ctrlpad/icon_volumedown_active.png) no-repeat;
+}
+.icon-back {
+	width: 60px;
+	height: 60px;
+	background: url(ctrlpad/icon_back.png) no-repeat;
+}
+.icon-back:active {
+	background: url(ctrlpad/icon_back_active.png) no-repeat;
+}
+.ctrl-btns .icon-back {
+	bottom: 25px;
+	left: 50%;
+	margin-left: -30px;
+}
+
+/* Main */
+.ctrl-wrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.ctrl-btns {
+	z-index: 9;
+	min-height:110px;
+}
+.ctrl-pos {
+	position: absolute;
+	width: 316px;
+	height: 316px;
+	top: 50%;
+	left: 50%;
+	margin: -158px 0 0 -158px;
+	overflow: hidden;
+	z-index: 9;
+}
+.ctrl-panel {
+	width: 316px;
+	height: 316px;
+	/*border-radius: 50%;*/
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	overflow: hidden;
+	/*background: url(ctrlpad/remote_bg.png);
+	background-size: cover;*/
+}
+.ctrl-panel .icon-btn {
+	float: left;
+	width: 50%;
+	height: 50%;
+	overflow: hidden;
+	background: none;
+}
+.ctrl-panel .icon-btn i {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(ctrlpad/ctrl_btn.png) 7px 4px no-repeat;
+	background-size: 153px 153px;
+}
+.ctrl-wrap .icon-right {
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
+.ctrl-wrap .icon-down {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+.ctrl-wrap .icon-left {
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+}
+.ctrl-wrap .icon-btn:active i {
+	background-image: url(ctrlpad/ctrl_btn_active.png);
+}
+.ctrl-panel .btn-ok {
+	position: absolute;
+	width: 116px;
+	height: 116px;
+	border-radius: 50%;
+	top: 100px;
+	left: 100px;
+	border-radius: 50%;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	background: transparent url(ctrlpad/btn_ok.png) no-repeat center center;
+	background-size: 116px 116px;
+}
+.ctrl-panel .btn-ok:active {
+	background-image: url(ctrlpad/btn_ok_active.png);
+}
+/* Header & Mask */
+.header-wrap {
+	position: relative;
+	min-width: 240px;
+	height: 45px;
+	z-index: 11;
+	background-color: #2f3641;
+	color: #fff;
+	overflow: hidden;/*-webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -o-transition: all .1s;
+    -ms-transition: all .1s;
+    transition: all .1s;*/
+}
+.header-wrap.active {
+	height: 75%;
+	min-height: 260px;
+}
+.header-wrap .mask {
+	position: relative;
+	height: 100%;
+	min-height: 260px;
+	margin-top: -45px;
+	background-color: #262d36;
+	z-index: 8;
+}
+.device-status {
+	position: relative;
+	height: 45px;
+	line-height: 45px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	background-color: #2f3641;
+	z-index: 9;
+}
+.device-status .device {
+	position: relative;
+	display: block;
+	padding: 0 20px 0 10px;
+	width: 80px;
+	overflow: hidden;
+}
+.device-status .cor-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-color: #fff transparent;
+	border-style: solid;
+	border-width: 8px 7px 0;
+	top: 20px;
+	right: 8px;
+	-webkit-transition: -webkit-transform .3s;
+	-moz-transition: -moz-transform .3s;
+	-o-transition: -o-transform .3s;
+	-transition: transform .3s;
+}
+.header-wrap.active .device {
+	background-color: #262d36;
+}
+.header-wrap.active .cor-arrow {
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.device-status .device.active .icon-disconnect {
+	background-position: 0 1px;
+}
+.device-status .device.active .cor-arrow {
+	display: block;
+}
+.device-status .icon {
+	vertical-align: -2px;
+	margin-right: 5px;
+}
+
+.header-wrap .status-tip {
+	position: relative;
+	margin-bottom: 20px;
+	padding: 60px 15px 15px;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.header-wrap .input-wrap {
+	position: relative;
+	width: 235px;
+	margin: 0 auto 10px;
+}
+.header-wrap .input-wrap span {
+	float: left;
+	font-size: 20px;
+	line-height: 32px;
+}
+.header-wrap .input-wrap input {
+	float: left;
+	width: 80px;
+	height: 32px;
+	margin-right: 5px;
+	padding: 0 10px;
+	line-height: 18px;
+	border: 0;
+	background-color: #454e5e;
+	border-radius: 2px;
+	color: #fff;
+	outline: none;
+}
+.header-wrap .input-wrap .ipt-tip {
+	font-size: 14px;
+	margin-top: 10px;
+	letter-spacing: 1px;
+}
+.header-wrap .status-tip input[disabled] {
+	background: #fff;
+	color: #aaa;
+}
+.header-wrap .status-tip input.loading {
+	background: #fff url(ctrlpad/loading.gif) right center no-repeat;
+}
+.header-wrap .status-tip input.checked {
+	background: #fff url(ctrlpad/checked.png) right center no-repeat;
+}
+.header-wrap .hd-tip {
+	position: absolute;
+	width: 250px;
+	left: 50%;
+	bottom: 15px;
+	margin-left: -125px;
+	text-indent: 24px;/*font-size: 12px;*/
+    /*letter-spacing: 1px;*/
+    /*text-align: center;*/
+}
+.header-wrap .hd-tip .icon-tip {
+	position: absolute;
+	left: 0;
+	top: 7px;
+}
+.loading-mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 100;
+	display: none;
+}
+.loading-status {
+	position: absolute;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	margin: -25px 0 0 -100px;
+	border-radius: 2px;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #fff;
+	top: 40%;
+	left: 50%;
+	background-color: rgba(0, 0, 0, .5);
+}
+.loading-status .icon-bd {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(ctrlpad/icon_loading.png) no-repeat;
+	background-size: cover;
+	vertical-align: -4px;
+	margin-right: 5px;
+}
+ @media screen and (max-width: 720px) {
+.ctrl-pos {
+	width: 236px;
+	height: 236px;
+	top: 50%;
+	left: 50%;
+	margin: -105px 0 0 -118px;
+}
+.ctrl-panel {
+	width: 236px;
+	height: 236px;
+}
+.ctrl-panel .icon-btn i {
+	background: url(ctrlpad/ctrl_btn.png) 6px 3px no-repeat;
+	background-size: 112px auto;
+}
+.ctrl-panel .btn-ok {
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+	top: 68px;
+	left: 68px;
+}
+}
+ @media screen and (max-height: 360px) {
+.ctrl-pos {
+	width: 160px;
+	height: 160px;
+	top: 50%;
+	left: 50%;
+	margin: -80px 0 0 -80px;
+}
+.ctrl-panel {
+	width: 160px;
+	height: 160px;
+}
+.ctrl-panel .icon-btn i {
+	background: url(ctrlpad/ctrl_btn.png) 5px 3px no-repeat;
+	background-size: 75px auto;
+}
+.ctrl-panel .btn-ok {
+	width: 50px;
+	height: 50px;
+	top: 55px;
+	left: 55px;
+	background-size: 50px 50px;
+}
+</style>
+<script type="text/javascript">
+function WS(url) {
+	var ws = null;
+	var ta = document.getElementById('responseText');	
+	if (!window.WebSocket) {
+		window.WebSocket = window.MozWebSocket;
+	}
+	if (window.WebSocket) {
+		ws = new WebSocket(url);
+		ws.onmessage = function(e) {
+			ta.value = ta.value + 'n' + event.data
+		};
+		ws.onopen = function(e) {
+			ta.value = "Web Socket opened!";
+		};
+		ws.onclose = function(e) {
+			ta.value = ta.value + "Web Socket closed " + e.code + ":" + e.reason; 
+		};
+		ws.onerror = function(e) {
+			for (var p in e) ta.value += '\n' + p + "=" + e[p];
+		};	
+	}
+	this.send = function(m) {
+		if (!window.WebSocket) { return false; }
+		if (ws.readyState == WebSocket.OPEN) {
+			ws.send(m);
+			return true;
+		} else {
+			return false;
+		}
+	};	
+}
+function preloadImages() {
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function preLoadImg(){
+	preloadImages('ctrlpad/btn_ok_active.png');
+	preloadImages('ctrlpad/ctrl_btn_active.png');
+	preloadImages('ctrlpad/icon_back_active.png');
+	preloadImages('ctrlpad/icon_home_active.png');
+	preloadImages('ctrlpad/icon_menu_active.png');
+	preloadImages('ctrlpad/icon_volumedown_active.png');
+	preloadImages('ctrlpad/icon_volumeup_active.png');
+}
+</script>
+</head>
+<body onLoad="preLoadImg()">
+    <div class="ctrl-wrap">
+        <div class="ctrl-btns" data-node="ctrls">
+			<!--
+            <a href="javascript:;" class="icon-btn icon-home" data-action="home"></a>
+            <a href="javascript:;" class="icon-btn icon-menu" data-action="menu"></a>-->
+            <span class="icon-volume-wrap">
+                <a onclick="ws.send(24)" href="javascript:;" class="icon-btn icon-volumeup" data-action="24"></a>
+                <a onclick="ws.send(25)" href="javascript:;" class="icon-btn icon-volumedown" data-action="25"></a>
+            </span>
+            <a onclick="ws.send(4)" href="javascript:;" class="icon-btn icon-back" data-action="4"></a>
+        </div>
+        <div class="ctrl-pos" data-node="ctrls">
+            <div class="ctrl-panel">
+                <a onclick="ws.send(19)" href="javascript:;" class="icon-btn btn-up" data-action="19"><i class="icon-up"></i></a>
+                <a onclick="ws.send(22)" href="javascript:;" class="icon-btn btn-right" data-action="22"><i class="icon-right"></i></a>
+                <a onclick="ws.send(21)" href="javascript:;" class="icon-btn btn-left" data-action="21"><i class="icon-left"></i></a>
+                <a onclick="ws.send(20)" href="javascript:;" class="icon-btn btn-down" data-action="20"><i class="icon-down"></i></a>
+                <a onclick="ws.send(66)" href="javascript:;" class="icon-btn btn-ok" data-action="66"></a>
+            </div>
+        </div>
+    </div>
+    <textarea rows="" cols="" style="display:none;" id="responseText"></textarea>
+<script type="text/javascript">
+var ws = new WS("_?_");
+</script>	
+</body>
+</html>

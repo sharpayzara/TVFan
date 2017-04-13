@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_update_dialog_top">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/update_logo" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="发现新版本"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/main_title_size" />
+            <!--android:layout_marginTop="@dimen/titlemargintop"-->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="@dimen/subtitlemargintop">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="版本号: "
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/sub_title_size" />
+                <!--android:paddingLeft="@dimen/textpaddingleft"-->
+
+
+                <TextView
+                    android:id="@+id/message1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView1"
+                    android:paddingLeft="5dp"
+                    android:text="1.0.3"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/sub_title_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--
+        android:paddingLeft="@dimen/textpaddingleft"
+        android:layout_alignParentLeft="true"-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/topbar"
+        android:layout_weight="3"
+        android:background="@drawable/shape_update_dialog_bottom">
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/DialogText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/textmargintop"
+            android:gravity="left"
+            android:paddingLeft="@dimen/textpaddingleft"
+            android:text="更新日志"
+            android:textColor="@color/textdark"
+            android:textSize="@dimen/sub_title_size" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/message2"-->
+        <!--style="@style/DialogText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:layout_marginTop="@dimen/textmargintop"-->
+        <!--android:layout_toRightOf="@+id/textView2"-->
+        <!--android:paddingLeft="@dimen/textpaddingleft"-->
+        <!--android:singleLine="true"-->
+        <!--android:text=""-->
+        <!--android:textColor="@color/textlight"-->
+        <!--android:textSize="@dimen/textlightsize" />-->
+
+        <TextView
+            android:id="@+id/updateMessage"
+            style="@style/DialogText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="@dimen/textmargintop"
+            android:paddingLeft="@dimen/textpaddingleft"
+            android:text=""
+            android:textColor="@color/textlight"
+            android:textSize="@dimen/sub_title_size" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="@dimen/buttonmargintop">
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/update_btnselector"
+                android:singleLine="true"
+                android:text="立即升级"
+                android:textColor="@color/textlight"
+                android:textSize="@dimen/sub_title_size" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/positiveButton"
+                android:background="@drawable/update_btnselector"
+                android:singleLine="true"
+                android:text="下次再说"
+                android:textColor="@color/textlight"
+                android:textSize="@dimen/sub_title_size" />
+
+            <RelativeLayout
+                android:id="@+id/progressBarLayout"
+                android:layout_width="410dp"
+                android:layout_height="30dp"
+                android:background="@drawable/update_progressbar_layout_background"
+                android:visibility="gone">
+
+                <ProgressBar
+                    style="@style/UpdateProgressbarStyle"
+                    android:id="@+id/progressBar"
+                    android:layout_width="400dp"
+                    android:layout_height="8dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

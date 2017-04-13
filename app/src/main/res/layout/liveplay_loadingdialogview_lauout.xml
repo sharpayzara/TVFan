@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+     >
+
+         <ProgressBar
+             android:id="@+id/livePlay_pb"
+             android:layout_width="62dp"
+                android:layout_height="62dp"
+             android:indeterminateDrawable="@drawable/progress_bar_rotate"
+             android:layout_centerHorizontal="true"
+             android:layout_above="@+id/liveplay_textprogressbar"
+             android:layout_marginBottom="20dp"
+             />
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:background="@drawable/g"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/liveplay_textprogressbar"
+        android:layout_marginBottom="20dp"
+        />
+        <TextView 
+        android:id="@+id/liveplay_textprogressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:textColor="@color/blue"
+        android:text="0k/s"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+         android:id="@+id/liveplay_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:singleLine="true"
+        android:text="正在为您自动加载最优直播来源......"
+        android:layout_below="@id/liveplay_textprogressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+
+</RelativeLayout>

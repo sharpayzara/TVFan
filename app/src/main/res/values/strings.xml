@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">电视粉高清影视</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_base_player">BasePlayerActivity</string>
+
+    <!-- 友好提示语 -->
+    <string name="errortitle1">网络速度过慢</string>
+    <string name="errortitle2">发生未知错误</string>
+    <string name="errorText3">工程师欧巴正在全力解决中，过会儿再来吧</string>
+    <string name="errorText9">网络速度不给力，换个网络环境试试？</string>
+
+    <string name="errortitle_kj">糟糕，获取设备号失败！</string>
+    <string name="errorText_kj">您的设备获取设备号失败，建议您联系当地网络运营商为您解决问题。</string>
+    <!-- 点播播放器按钮文字 -->
+    <string name="backword">上一集</string>
+    <string name="exitbutton">退出播放</string>
+    <string name="forword">下一集</string>
+    <!-- 网络请求onError提示文字 -->
+    <string name="unknown_internet_error">未知网络错误</string>
+    <string name="timeout_internet_error">网络连接超时</string>
+    <string name="no_internet_error">网络已断开连接,请检查网络</string>
+    <string name="server_down_error">服务器访问异常</string>
+    <string name="channel_maintain">该频道维护中</string>
+
+    <string name="portal_internet_error">网络连接失败，请按“退出”键返回系统，并检查网络</string>
+    <!--直播设置界面的固定字符串 -->
+    <string name="tv_collect">频道收藏</string>
+    <string name="tv_btn_leftright">左右按键</string>
+    <string name="tv_btn_topbottom">上下按键</string>
+    <string name="tv_ratio">画面比例</string>
+
+    <!--点播界面设置dialog字符 -->
+    <string name="program_collect">节目收藏</string>
+    <string name="difinition_setting">清晰度</string>
+    <string name="program_ratio">画面比例</string>
+
+</resources>

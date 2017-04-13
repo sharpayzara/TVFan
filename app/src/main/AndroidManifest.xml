@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tvfan.tv"
+    android:versionCode="4"
+    android:versionName="1.0.3">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:resizeable="true"
+        android:xlargeScreens="true" />
+
+    <!-- 适配小米需要加的配置参数 -->
+    <uses-feature
+        android:name="android.hardware.type.television"
+        android:required="true" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 这是添加自启动的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/markettv"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- umeng -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56964fbd67e58e83990008d8" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="7po" />
+        <!-- default A00940000000000000012 -->
+        <service
+            android:name=".daemon.EPGService"
+            android:exported="false"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="tvfan.tv.daemon.epgservice" />
+
+                <category android:name="android.intent.category.default" />
+            </intent-filter>
+        </service>
+        <service android:name=".daemon.PushService" />
+        <service
+            android:name=".daemon.EPGUpdateService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="tvfan.tv.daemon.EPGUpdateService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".daemon.NetService"
+            android:exported="false"
+            android:label="NetService">
+            <intent-filter>
+                <action android:name="tvfan.tv.daemon.netservice" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".daemon.DateTimeService"
+            android:exported="false"
+            android:label="DateTimeService">
+            <intent-filter>
+                <action android:name="tvfan.tv.daemon.datetimeService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".daemon.LogService"
+            android:exported="false"
+            android:label="LogService">
+            <intent-filter>
+                <action android:name="tvfan.tv.daemon.logService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".daemon.DownloadService"
+            android:exported="false"
+            android:label="DownloadService">
+            <intent-filter>
+                <action android:name="tvfan.tv.daemon.downloadService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".daemon.InteropService"
+            android:exported="false"
+            android:label="InteropService"
+            android:persistent="true"
+            android:process=":InteropService">
+            <intent-filter>
+                <action android:name="tvfan.tv.daemon.interopservice" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.gdx.live.detail.LiveActivity"
+            android:process=":liveplay"
+            android:theme="@android:style/Theme.Dialog"></activity>
+        <activity
+            android:name=".EntryPoint"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".Bootloader"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.andr.play.play.Page"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <!--<activity-->
+            <!--android:name=".ui.andr.cibnplay.ykewplay.Page"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:screenOrientation="landscape"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />-->
+        <!--<activity-->
+            <!--android:name=".ui.andr.news.detail.Page"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:screenOrientation="landscape"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />-->
+        <!--<activity-->
+            <!--android:name=".ui.andr.news.special.Page"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen">-->
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        <!--</activity>-->
+        <activity
+            android:name=".ui.andr.TestActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ConfirmDialog" />
+        <activity
+            android:name=".ui.andr.play.liveplay.Page"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:process=":liveActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <receiver
+            android:name=".daemon.PowerBooteceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ScreenProtectActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+    </application>
+
+</manifest>
+    <!--android:process=":liveplay"-->

@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "tvfan.tv"
+        minSdkVersion 14
+        targetSdkVersion 19
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/io.netty.versions.properties'
+        exclude 'META-INF/INDEX.LIST'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.1.0'
+    compile files('libs/afinal_libraty.jar')
+    compile files('libs/AppService.jar')
+    compile files('libs/baseproject_tv_v2.jar')
+    compile files('libs/cibn_tv_analytics.jar')
+    compile files('libs/CIBNLicense.jar')
+    compile files('libs/commons-lang-2.6.jar')
+    compile files('libs/commons-net-3.0.1.jar')
+    compile files('libs/core-2.3.0.jar')
+    compile files('libs/crystalpushsdk.jar')
+    compile files('libs/dom4j-1.6.1.jar')
+    compile files('libs/eventbus.jar')
+    compile files('libs/fastjson-1.1.33.jar')
+    compile files('libs/IDynamic.jar')
+    compile files('libs/lib_stonehenge.jar')
+    compile files('libs/libotaupdate.jar')
+    compile files('libs/MMAndroid_v1.2.4.jar')
+    compile files('libs/netty-buffer-4.0.28.Final.jar')
+    compile files('libs/netty-codec-4.0.28.Final.jar')
+    compile files('libs/netty-codec-http-4.0.28.Final.jar')
+    compile files('libs/netty-common-4.0.28.Final.jar')
+    compile files('libs/netty-handler-4.0.28.Final.jar')
+    compile files('libs/netty-transport-4.0.28.Final.jar')
+    compile files('libs/nineoldandroids-2.2.0.jar')
+    compile files('libs/shcmsystem.jar')
+    compile files('libs/SHCMSYSTEM_useraccount.jar')
+    compile files('libs/tvatap2plib.jar')
+    compile files('libs/umeng-analytics-v5.5.2.jar')
+    compile files('libs/volley.jar')
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+ 	
+ 	<!-- 背景图 -->
+	<item android:id="@+id/background"  android:drawable="@drawable/seekbarbj">
+	     
+	</item>
+	<!-- 第二进度图 -->
+	<item android:id="@+id/SecondaryProgress">
+          <clip >
+            <shape >
+                <corners android:radius="50dip" />
+               <!--  <gradient
+                    android:angle="270"
+                    android:centerColor="@color/seek_bg"
+                    android:centerY="0.75"
+                    android:endColor="@color/seek_bg"
+                    android:startColor="@color/seek_bg" /> -->
+            </shape>
+        </clip> 
+    </item>
+	
+	<!-- 进度度 -->
+	<item android:id="@+id/progress" >
+	    <clip >
+            <shape >
+               <solid android:color="#2e94e8"/>
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

@@ -1,0 +1,102 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitignore
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets\
+* libs\afinal_libraty.jar => app\libs\afinal_libraty.jar
+* libs\AppService.jar => app\libs\AppService.jar
+* libs\armeabi\libaccstub.so => app\src\main\jniLibs\armeabi\libaccstub.so
+* libs\armeabi\libalgmsyoukutv.so => app\src\main\jniLibs\armeabi\libalgmsyoukutv.so
+* libs\armeabi\libamplayer_hw.so => app\src\main\jniLibs\armeabi\libamplayer_hw.so
+* libs\armeabi\libandroidgl20.so => app\src\main\jniLibs\armeabi\libandroidgl20.so
+* libs\armeabi\libdecengine_allwinner_hw_41.so => app\src\main\jniLibs\armeabi\libdecengine_allwinner_hw_41.so
+* libs\armeabi\libdecengine_hw_23.so => app\src\main\jniLibs\armeabi\libdecengine_hw_23.so
+* libs\armeabi\libdecengine_hw_40.so => app\src\main\jniLibs\armeabi\libdecengine_hw_40.so
+* libs\armeabi\libdecengine_hw_41.so => app\src\main\jniLibs\armeabi\libdecengine_hw_41.so
+* libs\armeabi\libdecengine_hw_43.so => app\src\main\jniLibs\armeabi\libdecengine_hw_43.so
+* libs\armeabi\libdecengine_mc_41.so => app\src\main\jniLibs\armeabi\libdecengine_mc_41.so
+* libs\armeabi\libdecengine_mc_44.so => app\src\main\jniLibs\armeabi\libdecengine_mc_44.so
+* libs\armeabi\libdecengine_RK_mc_44.so => app\src\main\jniLibs\armeabi\libdecengine_RK_mc_44.so
+* libs\armeabi\libdecengine_RK_sf_44.so => app\src\main\jniLibs\armeabi\libdecengine_RK_sf_44.so
+* libs\armeabi\libforcetv.so => app\src\main\jniLibs\armeabi\libforcetv.so
+* libs\armeabi\libgdx.so => app\src\main\jniLibs\armeabi\libgdx.so
+* libs\armeabi\libgethwaddr.so => app\src\main\jniLibs\armeabi\libgethwaddr.so
+* libs\armeabi\libluajavayoukutv.so => app\src\main\jniLibs\armeabi\libluajavayoukutv.so
+* libs\armeabi\libmath_codecs.so => app\src\main\jniLibs\armeabi\libmath_codecs.so
+* libs\armeabi\libmediacodec_hw.so => app\src\main\jniLibs\armeabi\libmediacodec_hw.so
+* libs\armeabi\libMMANDKSignature.so => app\src\main\jniLibs\armeabi\libMMANDKSignature.so
+* libs\armeabi\libsmartlangdet.so => app\src\main\jniLibs\armeabi\libsmartlangdet.so
+* libs\armeabi\libstream_ghost.so => app\src\main\jniLibs\armeabi\libstream_ghost.so
+* libs\armeabi\libsystem_detect.so => app\src\main\jniLibs\armeabi\libsystem_detect.so
+* libs\armeabi\libvbyte-v7a.so => app\src\main\jniLibs\armeabi\libvbyte-v7a.so
+* libs\baseproject_tv_v2.jar => app\libs\baseproject_tv_v2.jar
+* libs\cibn_tv_analytics.jar => app\libs\cibn_tv_analytics.jar
+* libs\CIBNLicense.jar => app\libs\CIBNLicense.jar
+* libs\commons-lang-2.6.jar => app\libs\commons-lang-2.6.jar
+* libs\commons-net-3.0.1.jar => app\libs\commons-net-3.0.1.jar
+* libs\core-2.3.0.jar => app\libs\core-2.3.0.jar
+* libs\crystalpushsdk.jar => app\libs\crystalpushsdk.jar
+* libs\dom4j-1.6.1.jar => app\libs\dom4j-1.6.1.jar
+* libs\eventbus.jar => app\libs\eventbus.jar
+* libs\fastjson-1.1.33.jar => app\libs\fastjson-1.1.33.jar
+* libs\IDynamic.jar => app\libs\IDynamic.jar
+* libs\lib_stonehenge.jar => app\libs\lib_stonehenge.jar
+* libs\libotaupdate.jar => app\libs\libotaupdate.jar
+* libs\MMAndroid_v1.2.4.jar => app\libs\MMAndroid_v1.2.4.jar
+* libs\netty-buffer-4.0.28.Final.jar => app\libs\netty-buffer-4.0.28.Final.jar
+* libs\netty-codec-4.0.28.Final.jar => app\libs\netty-codec-4.0.28.Final.jar
+* libs\netty-codec-http-4.0.28.Final.jar => app\libs\netty-codec-http-4.0.28.Final.jar
+* libs\netty-common-4.0.28.Final.jar => app\libs\netty-common-4.0.28.Final.jar
+* libs\netty-handler-4.0.28.Final.jar => app\libs\netty-handler-4.0.28.Final.jar
+* libs\netty-transport-4.0.28.Final.jar => app\libs\netty-transport-4.0.28.Final.jar
+* libs\nineoldandroids-2.2.0.jar => app\libs\nineoldandroids-2.2.0.jar
+* libs\shcmsystem.jar => app\libs\shcmsystem.jar
+* libs\SHCMSYSTEM_useraccount.jar => app\libs\SHCMSYSTEM_useraccount.jar
+* libs\tvatap2plib.jar => app\libs\tvatap2plib.jar
+* libs\umeng-analytics-v5.5.2.jar => app\libs\umeng-analytics-v5.5.2.jar
+* libs\volley.jar => app\libs\volley.jar
+* lint.xml => app\lint.xml
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

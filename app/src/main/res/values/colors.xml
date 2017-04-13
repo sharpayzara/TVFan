@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+     <color name="seek_bg">#2a2b30</color>
+    
+    <!-- See through -->
+    <!-- Transparent black -->
+    <color name="transparent_black">#CC000000</color>
+    <color name="video_bg">#94100001</color>
+	
+    <!-- Transparent white -->
+    <color name="transparent_white">#ffcccccc</color>
+
+    <!-- Dark transparent color -->
+    <color name="list_item_background">#c1000000</color>
+
+    <!-- A darkish color used for the action bar -->
+    <color name="action_bar_color">#ff0d0d0d</color>
+
+    <color name="action_bar_color_light">#fff3f3f3</color>
+
+    <!-- A semi-transparent dark Holo shade of blue -->
+    <color name="holo_blue_dark">#ff0099cc</color>
+
+    <!-- A light, Holo shade of blue -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+
+    <!-- A light, transparent Holo shade of blue -->
+    <color name="holo_blue_light_transparent">#9933b5e5</color>
+
+    <!-- A light Holo shade of green -->
+    <color name="holo_green_light">#ff99cc00</color>
+
+    <!-- A light Holo shade of red -->
+    <color name="holo_red_light">#ffff4444</color>
+
+    <!-- A Holo shade of purple -->
+    <color name="holo_purple">#ffaa66cc</color>
+
+    <!-- A light Holo shade of orange -->
+    <color name="holo_orange_light">#ffffbb33</color>
+
+    <!-- A dark Holo shade of orange -->
+    <color name="holo_orange_dark">#ffff8800</color>
+    
+    <color name = "wifi_list_pressed">#0099cc</color>
+    
+    <color name = "search_left_bg">#20ffffff</color> <!-- #2D5589 -->
+    
+    <color name = "search_right_bg">#033C83</color>
+
+    <color name="live_list_selector">#2875c3</color>
+   
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 淡入的字符串，只能从左到右显示 -->
+    <declare-styleable name="FadeTextView">
+        <attr name="fade_txt_delta" format="reference|integer" />
+        <attr name="fade_txt_wp" format="reference|integer" />
+    </declare-styleable>
+
+    <!-- 图片布局,由于图片在选中时需要显示文本 -->
+    <declare-styleable name="ImageRelativeLayout">
+        <attr name="scaleType">
+            <enum name="matrix" value="0" />
+            <enum name="fitXY" value="1" />
+            <enum name="fitStart" value="2" />
+            <enum name="fitCenter" value="3" />
+            <enum name="fitEnd" value="4" />
+            <enum name="center" value="5" />
+            <enum name="centerCrop" value="6" />
+            <enum name="centerInside" value="7" />
+        </attr>
+        <!-- Sets a drawable as the content of this ImageView. -->
+        <attr name="src" format="reference|color" />
+
+        <!-- textview -->
+        <attr name="txt_align" format="reference|integer" />
+        <attr name="textSize" format="dimension" />
+        <attr name="text" format="string" localization="suggested" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="txtPaddingLeft" format="dimension" />
+        <!-- Sets the padding, in pixels, of the top edge; see {@link android.R.attr#padding}. -->
+        <attr name="txtPaddingTop" format="dimension" />
+        <!-- Sets the padding, in pixels, of the right edge; see {@link android.R.attr#padding}. -->
+        <attr name="txtPaddingRight" format="dimension" />
+        <!-- Sets the padding, in pixels, of the bottom edge; see {@link android.R.attr#padding}. -->
+        <attr name="txtPaddingBottom" format="dimension" />
+        <attr name="alwaysShowTxt" format="boolean" />
+    </declare-styleable>
+
+    <!-- 专题模板3图片布局,由于图片在选中时需要显示文本 -->
+    <declare-styleable name="SpecialTopicImageRelativeLayout">
+        <attr name="specialTopic_scaleType">
+            <enum name="matrix" value="0" />
+            <enum name="fitXY" value="1" />
+            <enum name="fitStart" value="2" />
+            <enum name="fitCenter" value="3" />
+            <enum name="fitEnd" value="4" />
+            <enum name="center" value="5" />
+            <enum name="centerCrop" value="6" />
+            <enum name="centerInside" value="7" />
+        </attr>
+        <!-- Sets a drawable as the content of this ImageView. -->
+        <attr name="specialTopic_src" format="reference|color" />
+
+        <!-- textview -->
+        <attr name="specialTopic_txt_align" format="reference|integer" />
+        <attr name="specialTopic_textSize" format="dimension" />
+        <attr name="specialTopic_text" format="string" localization="suggested" />
+        <attr name="specialTopic_textColor" format="reference|color" />
+        <attr name="specialTopic_txtPaddingLeft" format="dimension" />
+        <!-- Sets the padding, in pixels, of the top edge; see {@link android.R.attr#padding}. -->
+        <attr name="specialTopic_txtPaddingTop" format="dimension" />
+        <!-- Sets the padding, in pixels, of the right edge; see {@link android.R.attr#padding}. -->
+        <attr name="specialTopic_txtPaddingRight" format="dimension" />
+        <!-- Sets the padding, in pixels, of the bottom edge; see {@link android.R.attr#padding}. -->
+        <attr name="specialTopic_txtPaddingBottom" format="dimension" />
+        <attr name="specialTopic_alwaysShowTxt" format="boolean" />
+        <attr name="specialTopic_txtMarginBottom" format="dimension" />
+        <attr name="specialTopic_txtHeight" format="dimension" />
+    </declare-styleable>
+
+    <!-- Style of the tab indicator's tabs. -->
+    <attr name="vpiTabPageIndicatorStyle" format="reference" />
+
+    <declare-styleable name="SelectedBackgroundGridView">
+        <attr name="focusLostSelector" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+
+</resources>

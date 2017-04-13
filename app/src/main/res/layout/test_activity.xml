@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="700dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center"
+    android:alpha="0.7"
+    android:background="@drawable/default_background"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="您的预约已经开始."
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+</RelativeLayout>

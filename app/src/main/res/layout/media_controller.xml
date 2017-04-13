@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:background="@color/black" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:text="1111111111111111111111"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:src="@drawable/pause_focus" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:src="@color/black" />
+
+        <TextView
+            android:id="@+id/time_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="00:00:00"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <tvfan.tv.ui.andr.widgets.NumberSeekBar
+            android:id="@+id/mediacontroller_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/time_current"
+            android:progressDrawable="@drawable/numberseekbar_background"
+            android:thumb="@drawable/thumb_bar"
+            android:thumbOffset="0dp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mediacontroller_progress"
+            android:gravity="left"
+            android:text="00:50:00"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+</LinearLayout>

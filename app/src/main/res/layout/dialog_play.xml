@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="150dp"
+    android:background="@drawable/shape_liveplaysettingdialog"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_fav"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/playbutton_selector"
+        android:clickable="false"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dip"
+            android:gravity="center_vertical"
+            android:text="@string/program_collect"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/tv_1"
+            android:src="@drawable/play_setting_lift" />
+
+        <ImageView
+            android:id="@+id/img_fav"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/img_left" />
+
+        <TextView
+            android:id="@+id/tv_collect"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_fav"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_collect"
+            android:src="@drawable/play_setting_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_din"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/playbutton_selector"
+        android:clickable="false"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:gravity="center_vertical"
+            android:text="清晰度"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_left3"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_3"
+            android:src="@drawable/play_setting_lift" />
+
+        <ImageView
+            android:id="@+id/img_din"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/img_left3" />
+
+        <TextView
+            android:id="@+id/tv_btn_din"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_din"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_right3"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_btn_din"
+            android:src="@drawable/play_setting_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_radio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/playbutton_selector"
+        android:clickable="false"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/program_ratio"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_left2"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_2"
+            android:src="@drawable/play_setting_lift" />
+
+        <ImageView
+            android:id="@+id/img_radio"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/img_left2" />
+
+        <TextView
+            android:id="@+id/tv_ratio"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/img_radio"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_right2"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_ratio"
+            android:src="@drawable/play_setting_right" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- NumberProgressBar进度条相关style -->
+    <style name="NumberProgressBar_Default">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- 播放器筛选对话框样式 -->
+    <style name="PlayDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    <!-- 轮播对话框 -->
+    <style name="LiveDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/dialogWindowAnim</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+       <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="enterdialog">
+       <item name="android:windowBackground">@android:color/transparent</item>
+       <item name="android:windowFullscreen">true</item>
+       <item name="android:windowNoTitle">true</item>
+       <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="errordialog">
+        <item name="android:background">#000000</item>
+       <item name="android:windowFullscreen">true</item>
+       <item name="android:windowNoTitle">true</item>
+       <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="ConfirmDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/noAnimation</item>
+    </style>
+
+    <style name="noAnimation">
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <style name="UpdateProgressbarStyle">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/update_progressbar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxHeight">10dp</item>
+    </style>
+
+</resources>

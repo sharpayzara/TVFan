@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="newstextcolor">#048DFF</color>
+    <color name="gray">#696969</color>
+    <color name="transparent">#00000000</color>
+    <color name="none">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#ffff0000</color>
+    <color name="DeepSkyBlue">#00BFFF</color>
+    <color name="blue">#3399FF</color>
+    <color name="yellow">#FFFF9900</color>
+    <color name="home_profile_msg_color">#ff5ec1d6</color>
+    <color name="whiteSmoke">#F5F5F5</color>
+    <!-- #DCDCDC  	Gainsboro  	淡灰色 -->
+    <color name="gainsboro">#aaDCDCDC</color>
+    <color name="detail_bg">#aaB5B5B5</color>
+    <color name="btn_normal_state">#ffa4e700</color>
+    <color name="btn_selected_state">#ff86e700</color>
+    <color name="btn_pressed_state">#ffc8e700</color>
+    <color name="button_bar_bg">#10Ab0000</color>
+    <color name="image_check_bg">#2E94E8</color>
+
+
+    <!--
+    <color name="">#068806cc</color>
+    <color name="">#f68860cc</color>
+    <color name="">#086608cc</color>
+    -->
+
+
+    <!-- action bar -->
+    <color name="actionbar_separator">#8B1A1A</color>
+    <color name="actionbar_title">#FFFFFF</color>
+    <color name="actionbar_background_start">#8B1A1A</color>
+    <color name="actionbar_background_end">#CD2626</color>
+    <color name="actionbar_background_item_pressed_start">#FF7F00</color>
+    <color name="actionbar_background_item_pressed_end">#EE7600</color>
+    <color name="black_overlay">#66000000</color>
+    <!-- 1/4透明黑 -->
+    <color name="play_layout_color">#40000000</color>
+    <color name="progress_layout_color">#C0000000</color>
+    <color name="progressbar_background">#ffffff</color>
+    <color name="progressbar_progress">#009999</color>
+    <!-- 红 -->
+    <color name="progressbar_secondary_progress">#ff0000</color>
+    <!-- 1/2透明黑 -->
+    <color name="play_fragment_color">#7f000000</color>
+    <!-- 3/4透明黑 -->
+    <color name="play_fragment_actionbar_color">@color/transparent_black</color>
+
+    <!-- top map button font color -->
+    <color name="top_map_btn_color">#fffefefe</color>
+    <color name="top_map_btn_color2">#ff044ea5</color>
+
+    <!-- home header -->
+    <color name="home_header_bg_color">#88063064</color>
+    <color name="home_tab_selected">#0e9cff</color>
+
+    <!-- vpi color -->
+    <color name="vpi__background_holo_dark">#ff000000</color>
+    <color name="vpi__background_holo_light">#fff3f3f3</color>
+    <color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</color>
+    <color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</color>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="vpi__bright_foreground_inverse_holo_dark">@color/vpi__bright_foreground_holo_light</color>
+    <color name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark</color>
+
+    <!-- <color name="default_epg_text_color">#fff5f5f5</color> -->
+    <color name="home_news_center_title_color">#ffbebebe</color>
+    <color name="list_single_brand_sugguest_title_shadowcolor">#ff555555</color>
+    <color name="list_single_brand_logo2_bg2">#8fa2a2a2</color>
+    <color name="list_single_brand_logo2_bg">#88000000</color>
+    <color name="home_top_search_et_hint">#ff69acfa</color>
+    <color name="home_top_search_et_color">#ffeaeaea</color>
+    <color name="home_exit_button_txt_nor_color">#171717</color>
+    <color name="home_update_ver_txt_color">#ff96b4ee</color>
+    <color name="order_buy2_saving_txt_color">#ff959595</color>
+    <color name="home_profile_left_selected_txt_color">#ffffff</color>
+    <color name="home_profile_left_normal_txt_color">#C2C2C2</color>
+    <color name="white_gray">#ccBBBBBB</color>
+
+    <!-- 新闻列表页 -->
+    <color name="listfilm_news_left_text_onfocus">#FFFFFF</color>
+    <color name="listfilm_news_left_text_onselect">#048DFF</color>
+    <color name="specialtopic_news_left_text_onselect">#FBBF77</color>
+
+    <!-- 默认EPG字体颜色 -->
+    <color name="default_epg_text_color">#55ffffff</color>
+    <color name="listfilm_filter_background">#ED000000</color>
+    <color name="listfilm_filter_devideline_h">#22ffffff</color>
+    <color name="detail_btn_bg_focus">#eda31f</color>
+    <color name="detail_btn_bg">#565656</color>
+    <color name="shopping_price_color">#d50d03</color>
+    <color name="shopping_discount_color">#e8732d</color>
+    <color name="shopping_pre_price_color">#989898</color>
+
+    <!-- EPG4.0 新闻字体颜色 -->
+	<color name="news_left_title_text_color">#2e2c2d</color>
+	
+	
+	<!-- 版本升级对话框 -->
+	<color name="textlight">#9F9F9F</color>
+	<color name="textdark">#5B6463</color>
+    <color name="title_text_color">#FFFFFF</color>
+	
+</resources>
